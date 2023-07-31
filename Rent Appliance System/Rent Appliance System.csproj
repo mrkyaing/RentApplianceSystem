@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD3C24C3-EAFD-4D1B-A84F-22D9BF104377}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rent_Appliance_System</RootNamespace>
+    <AssemblyName>Rent Appliance System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ApplicanceService.cs" />
+    <Compile Include="DAO\BrandService.cs" />
+    <Compile Include="DAO\ApplianceTypeService.cs" />
+    <Compile Include="DAO\UserService.cs" />
+    <Compile Include="DAO\IUserDAO.cs" />
+    <Compile Include="DAO\IApplianceDAO.cs" />
+    <Compile Include="DAO\IApplianceTypeDAO.cs" />
+    <Compile Include="DAO\IBrandDAO.cs" />
+    <Compile Include="Models\BrandModel.cs" />
+    <Compile Include="Models\ApplianceTypeModel.cs" />
+    <Compile Include="Models\ApplianceModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="UI\Appliance\AdminstratorMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Appliance\AdminstratorMainPage.Designer.cs">
+      <DependentUpon>AdminstratorMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Appliance\ApplianceRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Appliance\ApplianceRegister.Designer.cs">
+      <DependentUpon>ApplianceRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Appliance\ApplianceTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Appliance\ApplianceTypeForm.Designer.cs">
+      <DependentUpon>ApplianceTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Brand\Brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Brand\Brand.Designer.cs">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Customer\CustomerMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Customer\CustomerMainPage.Designer.cs">
+      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Customer\CustomerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Customer\CustomerRegisterForm.Designer.cs">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DatabaseConnectionHelper.cs" />
+    <Compile Include="dsRentApplianceSystem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRentApplianceSystem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdminstrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdminstrator.Designer.cs">
+      <DependentUpon>LoginAdminstrator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginCustomer.Designer.cs">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Customer\RentPeroidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Customer\RentPeroidForm.Designer.cs">
+      <DependentUpon>RentPeroidForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Admin\UpdateAdminstrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\UpdateAdminstrator.Designer.cs">
+      <DependentUpon>UpdateAdminstrator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Appliance\AdminstratorMainPage.resx">
+      <DependentUpon>AdminstratorMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Appliance\ApplianceRegister.resx">
+      <DependentUpon>ApplianceRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Appliance\ApplianceTypeForm.resx">
+      <DependentUpon>ApplianceTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Brand\Brand.resx">
+      <DependentUpon>Brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customer\CustomerMainPage.resx">
+      <DependentUpon>CustomerMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customer\CustomerRegisterForm.resx">
+      <DependentUpon>CustomerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdminstrator.resx">
+      <DependentUpon>LoginAdminstrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginCustomer.resx">
+      <DependentUpon>LoginCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customer\RentPeroidForm.resx">
+      <DependentUpon>RentPeroidForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Admin\UpdateAdminstrator.resx">
+      <DependentUpon>UpdateAdminstrator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dsRentApplianceSystem.xsc">
+      <DependentUpon>dsRentApplianceSystem.xsd</DependentUpon>
+    </None>
+    <None Include="dsRentApplianceSystem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRentApplianceSystem.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRentApplianceSystem.xss">
+      <DependentUpon>dsRentApplianceSystem.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1486406146926-c627a92ad1ab.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
